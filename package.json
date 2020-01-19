@@ -1,0 +1,14 @@
+{
+  "name": "hackernewstojson-master",
+  "version": "1.0.0",
+  "description": "Save 'saved stories' from a Hacker News account to a simple JSON format.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hn-api-client": "^0.1.1"
+  }
+}
