@@ -4,13 +4,12 @@ const fs = require('fs');
 
 let listOfUpvoted = hnJSON["saved_stories"];
 
-a();
+startParsing();
 
-async function a(startFromId) {
+async function startParsing(startFromId) {
     fs.openSync("hn-sites.txt", 'a')
     let hasStarted = false;
     for (let item of listOfUpvoted) {
-
         if (!hasStarted) {
             if (startFromId) {
                 if (item.id != startFromId) {
@@ -22,7 +21,6 @@ async function a(startFromId) {
             }
         }
     
-
     if (item.id) {
         let resp = await hnApiClient.getItem(item.id);
         console.log(resp.url);
